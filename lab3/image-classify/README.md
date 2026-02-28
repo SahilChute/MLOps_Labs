@@ -1,4 +1,4 @@
-# 🐳 Dockerized Image Classifier — PyTorch + FastAPI + Redis
+# Dockerized Image Classifier — PyTorch + FastAPI + Redis
 
 A REST API that classifies images using a pre-trained ResNet50 model, served with FastAPI and cached with Redis. Fully containerized with Docker and Docker Compose.
 
@@ -30,7 +30,7 @@ image-classifier/
 
 ### 1. Clone the repository
 ```bash
-git clone <repo-url>
+git clone https://github.com/SahilChute/MLOps_Labs.git
 cd lab3/image-classifier
 ```
 
