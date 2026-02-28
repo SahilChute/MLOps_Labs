@@ -15,7 +15,7 @@ Make sure you have the following installed:
 ## Project Structure
 
 ```
-image-classifier/
+image-classify/
 ├── app/
 │   ├── main.py           # FastAPI app with Redis caching
 │   └── model.py          # ResNet50 model loading & inference
@@ -31,7 +31,7 @@ image-classifier/
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/SahilChute/MLOps_Labs.git
-cd lab3/image-classifier
+cd lab3/image-classify
 ```
 
 ### 2. Start all containers with Docker Compose
