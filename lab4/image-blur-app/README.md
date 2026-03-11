@@ -7,22 +7,6 @@ A batch image processing pipeline deployed on Google Cloud Run. The service acce
 ---
 A batch image processing pipeline deployed on Google Cloud Run. The service accepts image uploads, applies a Gaussian blur, saves both the original and blurred versions to Google Cloud Storage, and makes them available for download.
 Service URL: https://image-blur-service-253172666192.us-central1.run.app
-
-How to Test the Pipeline
-Step 1 — Verify the service is running
-Open this URL in your browser:
-https://image-blur-service-253172666192.us-central1.run.app/
-Expected response:
-json{
-  "status": "ETL pipeline is running",
-  "blur_radius": 10,
-  "endpoints": {
-    "POST /blur": "Upload and blur one or more images",
-    "GET  /download/<filename>": "Download a blurred image",
-    "GET  /list": "List all blurred images in the bucket"
-  }
-}
-
 ## Image Constraints
 
 | Constraint | Details |
