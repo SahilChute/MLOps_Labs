@@ -23,49 +23,6 @@ json{
   }
 }
 
-Step 2 — Upload and blur images
-Run this command in your terminal with any .jpg, .png, .jpeg, or .webp images:
-bashcurl -X POST https://image-blur-service-253172666192.us-central1.run.app/blur \
-  -F "images=@photo1.jpg" \
-  -F "images=@photo2.jpg"
-If you don't have images handy, download these free test images first:
-bashcurl -o test1.jpg "https://picsum.photos/800/600"
-curl -o test2.jpg "https://picsum.photos/640/480"
-Then blur them:
-bashcurl -X POST https://image-blur-service-253172666192.us-central1.run.app/blur \
-  -F "images=@test1.jpg" \
-  -F "images=@test2.jpg"
-Expected response:
-json{
-  "total_received": 2,
-  "total_blurred": 2,
-  "results": [
-    {
-      "file": "test1.jpg",
-      "status": "success",
-      "original_size": [800, 600],
-      "blur_radius": 10,
-      "saved_as": "blurred_test1.jpg",
-      "download_url": "/download/blurred_test1.jpg"
-    },
-    ...
-  ]
-}
-
-Step 3 — List all blurred images
-Open this in your browser or run via curl:
-https://image-blur-service-253172666192.us-central1.run.app/list
-You should see all previously processed images with their filenames, sizes, and download URLs.
-
-Step 4 — Download a blurred image
-In your browser, paste:
-https://image-blur-service-253172666192.us-central1.run.app/download/blurred_test1.jpg
-The blurred image will download automatically. Open it to visually confirm the blur was applied.
-Or via curl:
-bashcurl -OJ https://image-blur-service-253172666192.us-central1.run.app/download/blurred_test1.jpg
-
----
-
 ## Image Constraints
 
 | Constraint | Details |
