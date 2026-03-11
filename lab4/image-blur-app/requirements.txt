@@ -1,0 +1,4 @@
+Flask==2.0.1
+Werkzeug==2.0.3
+google-cloud-storage==1.42.3
+Pillow==9.5.0
